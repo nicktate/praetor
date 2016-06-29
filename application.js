@@ -8,4 +8,4 @@ module.exports = function(options) {
     praetor.version = pkg.version;
 
     return praetor;
-}
+};

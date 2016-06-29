@@ -26,7 +26,7 @@ class Praetor extends EventEmitter {
             start_time: new Date().valueOf(),
             leader_eligible: this.options.leader_eligible,
             leader: false
-        }
+        };
 
         this.legiond = new LegionD(this.options.legiond);
         this.options.initial_delay = this.legiond.network.options.tcp_timeout + 1000;
@@ -49,7 +49,7 @@ class Praetor extends EventEmitter {
                     if(_.isEmpty(leaders)) {
                         self.actions.elect();
                     }
-                }, self.options.initial_delay)
+                }, self.options.initial_delay);
             }
         });
 
